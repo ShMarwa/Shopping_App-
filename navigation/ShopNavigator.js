@@ -5,6 +5,7 @@ import { createDrawerNavigator } from "@react-navigation/drawer";
 
 import ProductsOverviewScreen from "../screens/shop/ProductsOverviewScreen";
 import Colors from "../constants/Colors";
+import ProductDetailScreen from "../screens/shop/ProductsDetailScreen";
 
 const Stack = createStackNavigator();
 
@@ -22,6 +23,12 @@ function ProductsNavigator() {
         name="ProductsOverview"
         component={ProductsOverviewScreen}
         options={{ headerTitle: "All Products" }}
+      />
+
+      <Stack.Screen
+        name="ProductDetail"
+        component={ProductDetailScreen}
+        options={{ headerTitle: "Details" }}
       />
     </Stack.Navigator>
   );
